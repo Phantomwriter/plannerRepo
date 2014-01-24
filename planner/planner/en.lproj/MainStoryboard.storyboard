@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Big Planner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLG-oz-Pfz">
+                                <color key="backgroundColor" red="0.96783712639999997" green="0.63707863919999996" blue="0.039443520029999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8L-V7-NVz">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="376" id="9q8-Xa-ys7"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MH9-fW-mlW">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add Plan">
+                                    <color key="titleColor" red="0.2342394545" green="0.50577445649999997" blue="0.08244233946" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6Pf-oS-ncz" kind="modal" id="X2R-uW-Qfu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="MH9-fW-mlW" secondAttribute="bottom" constant="94" id="8uq-Df-a1W"/>
+                            <constraint firstItem="SLG-oz-Pfz" firstAttribute="top" secondItem="3" secondAttribute="top" constant="12" id="BkB-Dk-i6M"/>
+                            <constraint firstAttribute="trailing" secondItem="MH9-fW-mlW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Enw-Sd-RLg"/>
+                            <constraint firstItem="K8L-V7-NVz" firstAttribute="top" secondItem="3" secondAttribute="top" constant="47" id="Ibl-vR-dxW"/>
+                            <constraint firstAttribute="trailing" secondItem="K8L-V7-NVz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VYO-HR-q8L"/>
+                            <constraint firstItem="K8L-V7-NVz" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eYf-0B-Ni2"/>
+                            <constraint firstItem="SLG-oz-Pfz" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="fHn-0J-2jk"/>
+                            <constraint firstItem="SLG-oz-Pfz" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="lqm-0v-TeX"/>
+                            <constraint firstItem="MH9-fW-mlW" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pr2-nX-CQP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="planListText" destination="K8L-V7-NVz" id="gms-si-MBO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="73"/>
+        </scene>
+        <!--Second View-->
+        <scene sceneID="p8d-OD-mk9">
+            <objects>
+                <viewController id="6Pf-oS-ncz" customClass="secondView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gXV-si-PHs">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w2-60-t22">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.2342394545" green="0.50577445649999997" blue="0.08244233946" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveNewPlan:" destination="6Pf-oS-ncz" eventType="touchUpInside" id="Cr5-tU-Egj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rm-J1-eO1">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Close Keyboard">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClick:" destination="6Pf-oS-ncz" eventType="touchUpInside" id="MYW-dO-BXG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Event " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaQ-hb-EJO">
+                                <color key="backgroundColor" red="0.96783712639999997" green="0.63707863919999996" blue="0.039443520029999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="eNx-ft-Ksw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fck-s2-qlL">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6Pf-oS-ncz" id="zM3-iE-gF1"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter Date and Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1D7-83-cX9">
+                                <color key="backgroundColor" red="0.96783712639999997" green="0.63707863919999996" blue="0.039443520029999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="e2f-Xg-YdP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TCL-4v-DQs">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="QuQ-pu-Wkc"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="412130984.52475601">
+                                    <!--2014-01-23 00:49:44 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="411735600">
+                                    <!--2014-01-18 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                                </timeZone>
+                                <connections>
+                                    <action selector="getDate:" destination="6Pf-oS-ncz" eventType="valueChanged" id="vZb-PZ-Iph"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3w2-60-t22" firstAttribute="leading" secondItem="gXV-si-PHs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1eB-ln-qRt"/>
+                            <constraint firstAttribute="trailing" secondItem="6rm-J1-eO1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6ZC-mW-jtP"/>
+                            <constraint firstItem="TCL-4v-DQs" firstAttribute="top" secondItem="1D7-83-cX9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CiJ-Pk-g9q"/>
+                            <constraint firstItem="iaQ-hb-EJO" firstAttribute="trailing" secondItem="gXV-si-PHs" secondAttribute="trailing" type="default" id="Epr-1K-eNN"/>
+                            <constraint firstItem="1D7-83-cX9" firstAttribute="trailing" secondItem="gXV-si-PHs" secondAttribute="trailing" type="default" id="Fgg-vQ-XEw"/>
+                            <constraint firstItem="1D7-83-cX9" firstAttribute="leading" secondItem="gXV-si-PHs" secondAttribute="leading" type="default" id="HCX-kd-Yz9"/>
+                            <constraint firstItem="6rm-J1-eO1" firstAttribute="top" secondItem="gXV-si-PHs" secondAttribute="top" constant="20" symbolic="YES" type="default" id="M5q-Gx-P2f"/>
+                            <constraint firstItem="TCL-4v-DQs" firstAttribute="leading" secondItem="gXV-si-PHs" secondAttribute="leading" type="default" id="Nb2-bv-C0m"/>
+                            <constraint firstItem="iaQ-hb-EJO" firstAttribute="top" secondItem="gXV-si-PHs" secondAttribute="top" constant="102" id="O06-WP-z0X"/>
+                            <constraint firstItem="Fck-s2-qlL" firstAttribute="leading" secondItem="gXV-si-PHs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="W7Y-rV-Y9g"/>
+                            <constraint firstItem="1D7-83-cX9" firstAttribute="top" secondItem="gXV-si-PHs" secondAttribute="top" constant="197" id="daz-GM-vGA"/>
+                            <constraint firstItem="Fck-s2-qlL" firstAttribute="top" secondItem="iaQ-hb-EJO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dgA-h3-WXD"/>
+                            <constraint firstAttribute="trailing" secondItem="Fck-s2-qlL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fDU-aE-fET"/>
+                            <constraint firstItem="3w2-60-t22" firstAttribute="top" secondItem="gXV-si-PHs" secondAttribute="top" constant="20" symbolic="YES" type="default" id="iXu-KT-eji"/>
+                            <constraint firstItem="TCL-4v-DQs" firstAttribute="trailing" secondItem="gXV-si-PHs" secondAttribute="trailing" type="default" id="lDm-S0-723"/>
+                            <constraint firstItem="iaQ-hb-EJO" firstAttribute="leading" secondItem="gXV-si-PHs" secondAttribute="leading" type="default" id="rxH-6T-kEu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NnD-KT-kNb"/>
+                    <connections>
+                        <outlet property="datePicker" destination="TCL-4v-DQs" id="gbk-m1-MNV"/>
+                        <outlet property="text" destination="Fck-s2-qlL" id="Hcp-I1-ZG7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UnG-KN-exC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="73"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="planListText" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="secondView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/secondView.h"/>
+            <relationships>
+                <relationship kind="action" name="getDate:" candidateClass="UIDatePicker"/>
+                <relationship kind="action" name="onClick:" candidateClass="UIButton"/>
+                <relationship kind="action" name="saveNewPlan:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="text" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
